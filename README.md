@@ -1,0 +1,99 @@
+<img width="1271" height="686" alt="Screenshot 2026-06-07 235052" src="https://github.com/user-attachments/assets/726e25b1-d138-4ba8-af3f-9c1e49ff6cd9" />
+# AWS Cloud Resume Challenge 
+
+## Project Overview
+
+For this project I built a fully serverless website on AWS. The website is hosted on Amazon S3, delivered through CloudFront, secured with HTTPS using ACM, connected to a custom domain through Route 53, and includes a visitor counter built with API Gateway, Lambda, and DynamoDB.
+
+
+
+
+
+---
+
+# Step 1 – Website Creation & S3 Hosting
+
+I created a personal portfolio website using HTML, CSS, and JavaScript. I used an LLM to help generate the initial frontend and later customized it myself. Placeholder sections were left for certificates and the API URL that would be added later.
+
+I then created an S3 bucket, enabled Static Website Hosting, and uploaded all website files, including images and certificates. The bucket remained private because access would later be handled through CloudFront.
+
+**Screenshot 1 – Website Files**
+
+**Screenshot 2 – S3 Bucket Configuration**
+
+---
+
+# Step 2 – CloudFront Distribution
+
+I created a CloudFront distribution and configured the S3 bucket as the origin. To keep the bucket secure, I used Origin Access Control (OAC), which automatically created the required bucket policy.
+
+This allowed CloudFront to access the website while preventing direct public access to S3.
+
+**Screenshot 3 – CloudFront Distribution**
+
+**Screenshot 4 – Bucket Policy**
+
+---
+
+# Step 3 – Domain & Route 53
+
+I purchased the domain **myappone.se** through One.com and created a hosted zone in Route 53.
+
+AWS generated four nameservers which I copied into One.com's DNS settings. After DNS propagation (approximately 24 hours), Route 53 became the authoritative DNS provider for the domain.
+
+**Screenshot 5 – Route 53 Hosted Zone**
+
+**Screenshot 6 – Nameserver Configuration**
+
+---
+
+# Step 4 – HTTPS with ACM
+
+To secure the website, I requested a TLS certificate from AWS Certificate Manager (ACM).
+
+ACM provided a DNS validation record which I added to Route 53. Once validated, I attached the certificate to CloudFront and created Route 53 alias records pointing the domain to the CloudFront distribution.
+
+Request flow:
+
+```text
+User → myappone.se → Route 53 → CloudFront → S3
+```
+
+**Screenshot 7 – ACM Certificate**
+
+**Screenshot 8 – Route 53 Alias Record**
+
+---
+
+# Step 5 – Visitor Counter Backend
+
+I created a DynamoDB table to store the visitor count and a Python Lambda function that increments the counter every time the website is loaded.
+
+The Lambda function was connected to API Gateway using an HTTP API. The generated API URL was added to the website's JavaScript code so the counter updates automatically whenever a user visits the page.
+
+Request flow:
+
+```text
+Browser → API Gateway → Lambda → DynamoDB → Browser
+```
+
+**Screenshot 9 – DynamoDB Table**
+
+**Screenshot 10 – Lambda Function**
+
+**Screenshot 11 – API Gateway**
+
+**Screenshot 12 – Visitor Counter Working**
+
+---
+
+# What I Learned
+
+* Static website hosting with S3
+* CloudFront and Origin Access Control (OAC)
+* DNS and Route 53
+* TLS certificates using ACM
+* Serverless applications with Lambda
+* API creation using API Gateway
+* Data storage with DynamoDB
+* IAM roles and least privilege access
