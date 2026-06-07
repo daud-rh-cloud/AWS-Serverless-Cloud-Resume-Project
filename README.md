@@ -1,10 +1,9 @@
-<img width="1271" height="686" alt="Screenshot 2026-06-07 235052" src="https://github.com/user-attachments/assets/726e25b1-d138-4ba8-af3f-9c1e49ff6cd9" />
 # AWS Cloud Resume Challenge 
 
-## Project Overview
-
+## Project Overvie
 For this project I built a fully serverless website on AWS. The website is hosted on Amazon S3, delivered through CloudFront, secured with HTTPS using ACM, connected to a custom domain through Route 53, and includes a visitor counter built with API Gateway, Lambda, and DynamoDB.
 
+<img width="1271" height="686" alt="Screenshot 2026-06-07 235052" src="https://github.com/user-attachments/assets/726e25b1-d138-4ba8-af3f-9c1e49ff6cd9" />
 
 
 
