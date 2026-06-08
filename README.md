@@ -12,7 +12,7 @@ For this project I built a fully serverless website on AWS. The website is hoste
 
 # Step 1 – Website Creation & S3 Hosting
 
-I created a personal portfolio website using HTML, CSS, and JavaScript. I used an LLM to help generate the initial frontend and later customized it myself. Placeholder sections were left for certificates and the API URL that would be added later.
+I created a personal portfolio website using HTML, CSS, and JavaScript. I used an LLM to help generate the initial frontend and later customized it myself. Placeholder sections were left for certificates and the API URL that would be added later.Cheak the code (index.html) 
 
 I then created an S3 bucket, enabled Static Website Hosting, and uploaded all website files, including images and certificates. The bucket remained private because access would later be handled through CloudFront.
 
