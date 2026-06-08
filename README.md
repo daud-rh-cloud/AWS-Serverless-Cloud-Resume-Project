@@ -84,12 +84,22 @@ Request flow:
 ```text
 Browser → API Gateway → Lambda → DynamoDB → Browser
 ```
+Crreating DynamoDb Table
+<img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/ff3bca9e-c20a-475e-8bec-fc88fcec1dda" />
 
-**Screenshot 9 – DynamoDB Table**
 
-**Screenshot 10 – Lambda Function**
+Lambda Function
+<img width="1069" height="686" alt="image" src="https://github.com/user-attachments/assets/8ff9166d-3de4-4d28-b29f-a0b0c368b7e7" />
 
-**Screenshot 11 – API Gateway**
+Creatign and Attaching DynamoDB Read-wrire IAM Plocy to Lamdas Role  //
+<img width="877" height="354" alt="image" src="https://github.com/user-attachments/assets/493837bb-f404-4cce-914c-eeeef26ffee6" />
+
+
+ Creating the API Gateway & paste the Http url as REST API in the front code**
+<img width="1621" height="731" alt="image" src="https://github.com/user-attachments/assets/1808912d-61e6-475b-ad94-59175c646f6b" />
+
+<img width="1000" height="484" alt="image" src="https://github.com/user-attachments/assets/fefc3afe-ba30-4988-ab8b-08ee706104d7" />
+
 
 **Screenshot 12 – Visitor Counter Working**
 
