@@ -79,29 +79,27 @@ I created a DynamoDB table to store the visitor count and a Python Lambda functi
 
 The Lambda function was connected to API Gateway using an HTTP API. The generated API URL was added to the website's JavaScript code so the counter updates automatically whenever a user visits the page.
 
-Request flow:
-
-```text
-Browser → API Gateway → Lambda → DynamoDB → Browser
-```
+---
 Crreating DynamoDb Table
 <img width="940" height="443" alt="image" src="https://github.com/user-attachments/assets/ff3bca9e-c20a-475e-8bec-fc88fcec1dda" />
 
-
+---
 Lambda Function
 <img width="1069" height="686" alt="image" src="https://github.com/user-attachments/assets/8ff9166d-3de4-4d28-b29f-a0b0c368b7e7" />
-
+---
 Creatign and Attaching DynamoDB Read-wrire IAM Plocy to Lamdas Role  //
 <img width="877" height="354" alt="image" src="https://github.com/user-attachments/assets/493837bb-f404-4cce-914c-eeeef26ffee6" />
-
-
+---
  Creating the API Gateway & paste the Http url as REST API in the front code**
 <img width="1621" height="731" alt="image" src="https://github.com/user-attachments/assets/1808912d-61e6-475b-ad94-59175c646f6b" />
 
 <img width="1000" height="484" alt="image" src="https://github.com/user-attachments/assets/fefc3afe-ba30-4988-ab8b-08ee706104d7" />
-
-
-**Screenshot 12 – Visitor Counter Working**
+---
+i added the LAMDA tigger 
+<img width="1114" height="399" alt="image" src="https://github.com/user-attachments/assets/26ae5fac-3f40-4848-b048-1430921ea69d" />
+---
+– Visitor Counter NOW Working**
+<img width="1158" height="244" alt="image" src="https://github.com/user-attachments/assets/b2623aac-5df7-4248-b30d-385f9a746a39" />
 
 ---
 
