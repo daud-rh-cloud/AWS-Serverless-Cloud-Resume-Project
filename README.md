@@ -16,7 +16,12 @@ I created a personal portfolio website using HTML, CSS, and JavaScript. I used a
 
 I then created an S3 bucket, enabled Static Website Hosting, and uploaded all website files, including images and certificates. The bucket remained private because access would later be handled through CloudFront.
 
+---
+
 <img width="1590" height="594" alt="image" src="https://github.com/user-attachments/assets/59ca2b40-0eee-467c-8225-95f4e725bfb7" />
+
+----
+Tunred on Static Website Hosting 
 
 <img width="1132" height="664" alt="image" src="https://github.com/user-attachments/assets/39fb1492-d218-4f3f-bd65-dc0029567cf7" />
 
