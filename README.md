@@ -34,7 +34,6 @@ This allowed CloudFront to access the website while preventing direct public acc
 
 Orgin Access----
 <img width="1446" height="746" alt="image" src="https://github.com/user-attachments/assets/dc650d6c-cb9c-4364-873c-b63752af3269" />
-
 Update the Bucket policy 
 <img width="1021" height="591" alt="image" src="https://github.com/user-attachments/assets/b949247c-048c-4f21-b219-6debaa1f99e3" />
 
