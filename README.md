@@ -1,4 +1,4 @@
-# AWS Cloud Resume Challenge 
+# AWS Cloud Resume Challenge (ongoing DNS updates) 
 
 ## Project Overvie
 For this project I built a fully serverless website on AWS. The website is hosted on Amazon S3, delivered through CloudFront, secured with HTTPS using ACM, connected to a custom domain through Route 53, and includes a visitor counter built with API Gateway, Lambda, and DynamoDB.
