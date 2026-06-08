@@ -1,6 +1,6 @@
 # AWS Cloud Resume Challenge (ongoing DNS updates) 
 But the website is reachble via Cloudfront URL ---->>> <https://d2sqf3v8kywgfm.cloudfront.net>
-## Project Overvie
+## Project Overview
 For this project I built a fully serverless website on AWS. The website is hosted on Amazon S3, delivered through CloudFront, secured with HTTPS using ACM, connected to a custom domain through Route 53, and includes a visitor counter built with API Gateway, Lambda, and DynamoDB.
 
 <img width="1335" height="749" alt="image" src="https://github.com/user-attachments/assets/62ca1387-f91e-4143-b443-bef6e7109abc" />
