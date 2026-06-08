@@ -29,10 +29,12 @@ I then created an S3 bucket, enabled Static Website Hosting, and uploaded all we
 I created a CloudFront distribution and configured the S3 bucket as the origin. To keep the bucket secure, I used Origin Access Control (OAC), which automatically created the required bucket policy.
 
 This allowed CloudFront to access the website while preventing direct public access to S3.
-
+ 
 <img width="1641" height="597" alt="image" src="https://github.com/user-attachments/assets/43f71d9a-eea3-40fa-9970-162c4989b89d" />
+
 Orgin Access----
 <img width="1446" height="746" alt="image" src="https://github.com/user-attachments/assets/dc650d6c-cb9c-4364-873c-b63752af3269" />
+
 Update the Bucket policy 
 <img width="1021" height="591" alt="image" src="https://github.com/user-attachments/assets/b949247c-048c-4f21-b219-6debaa1f99e3" />
 
