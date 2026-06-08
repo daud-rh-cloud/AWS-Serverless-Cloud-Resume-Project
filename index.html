@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOUR NAME — Cloud Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       TEMPLATE CONFIGURATION — Edit the CSS variables below
+       to quickly change colors and fonts across the whole page.
+    ============================================================ */
+    :root {
+      --bg:          #0d1117;
+      --surface:     #161b22;
+      --border:      #21262d;
+      --border-soft: #30363d;
+      --text:        #e6edf3;
+      --muted:       #8b949e;
+      --accent:      #f78166;   /* ← change this to your accent colour */
+      --link:        #58a6ff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* ── TEMPLATE NOTICE BANNER ─────────────────────────────── */
+    .template-banner {
+      background: #2d1f00;
+      border: 1px solid #f78166;
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-bottom: 40px;
+      font-size: 0.85rem;
+      color: #f0b070;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .template-banner strong { color: #f78166; }
+    .template-banner ul { margin-top: 8px; padding-left: 20px; }
+    .template-banner li { margin: 4px 0; }
+
+    /* ── HERO ───────────────────────────────────────────────── */
+    .hero {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .hero .avatar-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px dashed var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Uncomment this and add src="your-photo.jpg" to use a real photo:
+    .hero img {
+      width: 120px; height: 120px; border-radius: 50%;
+      object-fit: cover; margin-bottom: 20px;
+      border: 2px solid var(--border-soft);
+    }
+    */
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .hero p.subtitle {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 20px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .hero p.bio {
+      color: var(--text);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.5rem;
+      line-height: 2;
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── SECTIONS ───────────────────────────────────────────── */
+    section { margin-bottom: 70px; }
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    /* ── ARCHITECTURE BLOCKS ────────────────────────────────── */
+    .arch-block {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .arch-block h3 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+
+    .arch-flow {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--link);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .arch-block ul { list-style: none; padding: 0; }
+
+    .arch-block ul li {
+      color: var(--muted);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .arch-block ul li:last-child { border-bottom: none; }
+    .arch-block ul li span { color: var(--text); font-weight: bold; }
+
+    /* ── CERTIFICATES ───────────────────────────────────────── */
+    .cert-toggle { cursor: pointer; user-select: none; }
+    .cert-toggle:hover { opacity: 0.85; }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .cert-grid img {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      border-radius: 8px;
+      background-color: var(--surface);
+      border: 1px solid var(--border-soft);
+      padding: 8px;
+    }
+
+    /* Placeholder cert boxes shown when no images are provided */
+    .cert-placeholder {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 2px dashed var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cert-placeholder .cert-icon { font-size: 2rem; }
+
+    /* ── VISITOR COUNTER ────────────────────────────────────── */
+    .counter {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    .counter-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 24px;
+      text-align: center;
+    }
+
+    .counter-card p { color: var(--muted); font-size: 0.8rem; margin-bottom: 4px; }
+
+    .counter-card #count {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--link);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ════════════════════════════════════════════════════════
+       TEMPLATE SETUP CHECKLIST  (remove this banner when done)
+  ═════════════════════════════════════════════════════════ -->
+  <div class="template-banner">
+    <strong>📋 Template Setup Checklist</strong> — remove this banner when done
+    <ul>
+      <li>Replace <strong>YOUR NAME</strong> in the &lt;title&gt; and &lt;h1&gt;</li>
+      <li>Replace <strong>YOUR_ROLE_HERE</strong> with your job title / certifications</li>
+      <li>Replace the <strong>bio paragraph</strong> with your own intro text</li>
+      <li>Add your <strong>profile photo</strong>: rename it <code>profile.jpg</code> and uncomment the &lt;img&gt; block</li>
+      <li>Update the <strong>Architecture section</strong> to match your own AWS setup</li>
+      <li>Add your <strong>certificate images</strong> (cert1.png … certN.png) or remove that section</li>
+      <li>Replace <strong>YOUR_API_GATEWAY_URL</strong> with your real API Gateway endpoint</li>
+      <li>Update the <strong>footer</strong> with your name</li>
+    </ul>
+  </div>
+
+  <!-- ════════════════════════════════
+       HERO — Replace all placeholders
+  ═════════════════════════════════ -->
+  <div class="hero">
+
+    <!-- OPTION A: Placeholder box (default) -->
+    <div class="avatar-placeholder">profile<br>photo<br>here</div>
+
+    <!-- OPTION B: Uncomment below and add your photo file -->
+    <!-- <img src="profile.jpg" alt="Your Name" onerror="this.style.display='none'" /> -->
+
+    <h1>YOUR NAME</h1>
+    <p class="subtitle">YOUR_ROLE_HERE | e.g. AWS Certified Cloud Practitioner | Cloud &amp; DevOps Engineer</p>
+    <p class="bio">
+      Hi, I am [YOUR NAME]. [Write 2–3 sentences about yourself here — your background,
+      what you are learning, and what this site demonstrates.]<br><br>
+      Thank you for visiting my demo website.
+    </p>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       ARCHITECTURE — Update to match your AWS setup
+  ═════════════════════════════════════════════════ -->
+  <section>
+    <h2>How This Website Works</h2>
+
+    <!-- Block 1: Website Delivery -->
+    <div class="arch-block">
+      <h3>Website Delivery</h3>
+      <!-- Update the flow below to match your actual architecture -->
+      <div class="arch-flow">User → Route 53 → CloudFront → S3</div>
+      <ul>
+        <li><span>S3</span> — [Describe what S3 does in your setup]</li>
+        <li><span>CloudFront</span> — [Describe what CloudFront does in your setup]</li>
+        <li><span>Route 53</span> — [Describe what Route 53 does in your setup]</li>
+        <li><span>ACM</span> — [Describe what ACM / TLS does in your setup]</li>
+      </ul>
+    </div>
+
+    <!-- Block 2: Visitor Counter (remove if not used) -->
+    <div class="arch-block">
+      <h3>Visitor Counter</h3>
+      <div class="arch-flow">User → API Gateway → Lambda → DynamoDB</div>
+      <ul>
+        <li><span>API Gateway</span> — [Describe what API Gateway does in your setup]</li>
+        <li><span>Lambda</span> — [Describe your Lambda function]</li>
+        <li><span>DynamoDB</span> — [Describe what DynamoDB stores]</li>
+      </ul>
+    </div>
+
+    <!-- Add more arch-block divs here for additional components -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CERTIFICATES — Add your cert images or remove this section
+  ════════════════════════════════════════════════════════════ -->
+  <section>
+    <h2 class="cert-toggle" onclick="toggleCerts()">
+      My Current Certifications <span id="cert-arrow">▶</span>
+    </h2>
+    <div class="cert-grid" id="cert-grid" style="display:none">
+
+      <!-- Replace src values with your actual certificate image files.
+           Add or remove <img> tags as needed.
+           The onerror shows a placeholder box if the image is missing. -->
+      <img src="cert1.png" alt="Certificate 1"
+           onerror="this.outerHTML='<div class=\'cert-placeholder\'><div class=\'cert-icon\'>🏅</div><div>cert1.png<br>not found</div></div>'" />
+
+      <img src="cert2.png" alt="Certificate 2"
+           onerror="this.outerHTML='<div class=\'cert-placeholder\'><div class=\'cert-icon\'>🏅</div><div>cert2.png<br>not found</div></div>'" />
+
+      <img src="cert3.png" alt="Certificate 3"
+           onerror="this.outerHTML='<div class=\'cert-placeholder\'><div class=\'cert-icon\'>🏅</div><div>cert3.png<br>not found</div></div>'" />
+
+      <!-- Add more certs here:
+      <img src="cert4.png" alt="Certificate 4" onerror="..." />
+      -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       VISITOR COUNTER — Replace API URL with your own
+  ═════════════════════════════════════════════════════ -->
+  <h2>Live Visitor Counter</h2>
+  <div class="counter">
+    <div class="counter-card">
+      <p>Total Visitors</p>
+      <div id="count">...</div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>Built and deployed on AWS by YOUR NAME</p>
+  </footer>
+
+</div>
+
+<script>
+  // ── Certificates toggle ──────────────────────────────────────
+  function toggleCerts() {
+    const grid  = document.getElementById('cert-grid');
+    const arrow = document.getElementById('cert-arrow');
+    if (grid.style.display === 'none') {
+      grid.style.display = 'grid';
+      arrow.textContent  = '▼';
+    } else {
+      grid.style.display = 'none';
+      arrow.textContent  = '▶';
+    }
+  }
+
+  // ── Visitor counter ──────────────────────────────────────────
+  // Replace the URL below with YOUR real API Gateway endpoint.
+  // Example: "https://abc123xyz.execute-api.us-east-1.amazonaws.com/count"
+  const API_URL = "YOUR_API_GATEWAY_URL";
+
+  fetch(API_URL)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("count").textContent = data.count;
+    })
+    .catch(() => {
+      document.getElementById("count").textContent = "—";
+    });
+</script>
+</body>
+</html>
