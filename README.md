@@ -78,7 +78,7 @@ User → myappone.se → Route 53 → CloudFront → S3
 I created a DynamoDB table to store the visitor count and a Python Lambda function that increments the counter every time the website is loaded.
 
 The Lambda function was connected to API Gateway using an HTTP API. The generated API URL was added to the website's JavaScript code so the counter updates automatically whenever a user visits the page.
----
+
 
 ---
 i created DynamoDb Table
