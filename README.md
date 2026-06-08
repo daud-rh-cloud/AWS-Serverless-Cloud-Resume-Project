@@ -39,7 +39,7 @@ Orgin Access----
 
 ---
 
-Update the Bucket policy 
+Updated the Bucket policy 
 <img width="1021" height="591" alt="image" src="https://github.com/user-attachments/assets/b949247c-048c-4f21-b219-6debaa1f99e3" />
 
 
