@@ -59,17 +59,28 @@ I purchased the domain **myappone.se** through One.com and created a hosted zone
 
 AWS generated four nameservers which I copied into One.com's DNS settings. After DNS propagation (approximately 24 hours), Route 53 became the authoritative DNS provider for the domain.
 
-**Screenshot 5 – Route 53 Hosted Zone**
+---
+ – Route 53 Hosted Zone**
+<img width="1604" height="535" alt="image" src="https://github.com/user-attachments/assets/0fae4eb8-1308-4e0e-8dcb-65b399184afa" />
 
-**Screenshot 6 – Nameserver Configuration**
+---
+Nameserver Configuration** ( Still ongoing update ass i used 3rd party registerer ) !!!!!
+<img width="841" height="714" alt="image" src="https://github.com/user-attachments/assets/ffb43064-9a56-455a-81b4-ca9c6054a77f" />
+
 
 ---
 
 # Step 4 – HTTPS with ACM
 
-To secure the website, I requested a TLS certificate from AWS Certificate Manager (ACM).
+To secure the website, I requested a TLS certificate from AWS Certificate Manager (ACM).(ALSO ONGOING )
 
-ACM provided a DNS validation record which I added to Route 53. Once validated, I attached the certificate to CloudFront and created Route 53 alias records pointing the domain to the CloudFront distribution.
+---
+ACM provided a DNS validation record which I added to Route 53. 
+<img width="1621" height="522" alt="image" src="https://github.com/user-attachments/assets/e4938ecc-e9d3-48ba-baa4-71fe7e36132c" />
+
+---
+Once validated, I will attached the certificate to CloudFront and created Route 53 alias records pointing the domain to the CloudFront distribution.
+( ---------------------------) 
 
 Request flow:
 
