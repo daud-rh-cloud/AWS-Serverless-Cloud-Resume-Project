@@ -1,5 +1,5 @@
 # AWS Cloud Resume Challenge (ongoing DNS updates) 
-But the website is reachble via Cloudfront URL ---->>> <https://d2sqf3v8kywgfm.cloudfront.net>
+Visit my Website ----->>>>  https://myappone.se/
 ## Project Overview
 For this project I built a fully serverless website on AWS. The website is hosted on Amazon S3, delivered through CloudFront, secured with HTTPS using ACM, connected to a custom domain through Route 53, and includes a visitor counter built with API Gateway, Lambda, and DynamoDB.
 
@@ -70,9 +70,10 @@ Nameserver Configuration** ( Still ongoing update ass i used 3rd party registere
 
 ---
 
-# Step 4 – HTTPS with ACM
+# Step 4 – Register TlS Certificate (in ACM) & Attchiing that to Cloudfont 
 
-To secure the website, I requested a TLS certificate from AWS Certificate Manager (ACM).(ALSO ONGOING )
+To secure the website, I requested a TLS certificate from AWS Certificate Manager (ACM)
+
 
 ---
 ACM provided a DNS validation record which I added to Route 53. 
