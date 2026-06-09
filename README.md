@@ -64,7 +64,7 @@ AWS generated four nameservers which I copied into One.com's DNS settings. After
 <img width="1604" height="535" alt="image" src="https://github.com/user-attachments/assets/0fae4eb8-1308-4e0e-8dcb-65b399184afa" />
 
 ---
-Nameserver Configuration** ( Still ongoing update ass i used 3rd party registerer ) !!!!!
+Nameserver Configuration** 
 <img width="841" height="714" alt="image" src="https://github.com/user-attachments/assets/ffb43064-9a56-455a-81b4-ca9c6054a77f" />
 
 
@@ -80,7 +80,7 @@ ACM provided a DNS validation record which I added to Route 53.
 <img width="1621" height="522" alt="image" src="https://github.com/user-attachments/assets/e4938ecc-e9d3-48ba-baa4-71fe7e36132c" />
 
 ---
-Once validated, I will attached the certificate to CloudFront and created Route 53 alias records pointing the domain to the CloudFront distribution.
+Once validated, I attached the certificate to CloudFront and created Route 53 alias records pointing the domain to the CloudFront distribution.
 
 Cloudfront 
 <img width="1600" height="812" alt="image" src="https://github.com/user-attachments/assets/55333f14-0c6d-4754-aee5-fa7a1d1f0440" />
