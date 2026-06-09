@@ -97,9 +97,7 @@ Request flow:
 User → myappone.se → Route 53 → CloudFront → S3
 ```
 
-**Screenshot 7 – ACM Certificate**
 
-**Screenshot 8 – Route 53 Alias Record**
 
 ---
 
