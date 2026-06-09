@@ -87,7 +87,7 @@ Cloudfront
 
 ---
 ROUTE 53 \
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/737d8d8c-c7cb-46d2-83a5-125c329c75a9" />
+<img width="1600" height="783" alt="image" src="https://github.com/user-attachments/assets/be979698-70f4-43da-a853-5e45796dde6d" />
 
 
 
