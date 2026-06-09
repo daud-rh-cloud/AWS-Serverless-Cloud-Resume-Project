@@ -81,7 +81,15 @@ ACM provided a DNS validation record which I added to Route 53.
 
 ---
 Once validated, I will attached the certificate to CloudFront and created Route 53 alias records pointing the domain to the CloudFront distribution.
-( ---------------------------) 
+
+Cloudfront 
+<img width="1600" height="812" alt="image" src="https://github.com/user-attachments/assets/55333f14-0c6d-4754-aee5-fa7a1d1f0440" />
+
+---
+ROUTE 53 \
+<img width="1600" height="1000" alt="image" src="https://github.com/user-attachments/assets/22b74daf-40b6-4d8e-ae2e-f9c061c002af" />
+
+
 
 Request flow:
 
